@@ -20,6 +20,8 @@ class PID
 	
     void SetMode(int Mode);               // * sets PID to either Manual (0) or Auto (non-0)
 
+    bool NeedsCompute();                  // * Returns true if calling Compute() will actually
+                                          //   perform a PID computation.
     bool Compute();                       // * performs the PID calculation.  it should be
                                           //   called every time loop() cycles. ON/OFF and
                                           //   calculation frequency can be set using SetMode
